@@ -3,7 +3,7 @@ import { CreateDeviceService } from '../../services/device/CreateDeviceService'
 
 class CreateDeviceController {
     async handle(request: Request, response: Response) {
-        const { name, code, cash_price, term_price, parcel, value_parcel } = request.body;
+        const { name, code, cash_price, term_price, parcel, value_parcel, location } = request.body;
 
         const createDeviceService = new CreateDeviceService();
 
@@ -13,7 +13,8 @@ class CreateDeviceController {
             cash_price,
             term_price,
             parcel,
-            value_parcel
+            value_parcel,
+            location
         });
 
         return response.json(device);

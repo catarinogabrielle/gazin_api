@@ -18,9 +18,25 @@ model Device {
   term_price   String
   parcel       String
   value_parcel String
+  location     Boolean
 
   create_at DateTime? @default(now())
   update_at DateTime? @default(now())
 
   @@map("device")
+}
+
+model Location {
+  id           String @id @default(uuid())
+  code         String
+  region       String
+  cash_price   String
+  term_price   String
+  parcel       String
+  value_parcel String
+
+  create_at DateTime? @default(now())
+  update_at DateTime? @default(now())
+
+  @@map("location")
 }

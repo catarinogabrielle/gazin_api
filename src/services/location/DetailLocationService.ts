@@ -1,17 +1,16 @@
 import prismaClient from "../../prisma";
 
-class DetailDeviceService {
+class DetailLocationService {
     async execute() {
-        const device = await prismaClient.device.findMany({
+        const device = await prismaClient.location.findMany({
             select: {
                 id: true,
-                name: true,
                 code: true,
+                region: true,
                 cash_price: true,
                 term_price: true,
                 parcel: true,
-                value_parcel: true,
-                location: true
+                value_parcel: true
             }
         })
 
@@ -20,4 +19,4 @@ class DetailDeviceService {
     }
 }
 
-export { DetailDeviceService }
+export { DetailLocationService }
