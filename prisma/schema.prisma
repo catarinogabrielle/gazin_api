@@ -10,8 +10,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+//criar uma migration: yarn prisma migrate dev
+
 model Device {
-  id           String @id @default(uuid())
+  id           String  @id @default(uuid())
   name         String
   code         String
   cash_price   String
@@ -30,6 +32,9 @@ model Location {
   id           String @id @default(uuid())
   code         String
   region       String
+  city         String
+  store        String
+  id_store     String
   cash_price   String
   term_price   String
   parcel       String

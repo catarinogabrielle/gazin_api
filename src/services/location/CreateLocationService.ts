@@ -3,6 +3,9 @@ import prismaClient from "../../prisma"
 interface UserRequest {
     code: string;
     region: string;
+    city: string;
+    store: string;
+    id_store: string;
     cash_price: string;
     term_price: string;
     parcel: string;
@@ -10,9 +13,9 @@ interface UserRequest {
 }
 
 class CreateLocationService {
-    async execute({ code, region, cash_price, term_price, parcel, value_parcel }: UserRequest) {
+    async execute({ code, region, city, store, id_store, cash_price, term_price, parcel, value_parcel }: UserRequest) {
 
-        if (!code || !region || !cash_price || !term_price || !parcel || !value_parcel) {
+        if (!code || !region || !city || !store || !id_store || !cash_price || !term_price || !parcel || !value_parcel) {
             throw new Error("Campo vazio")
         }
 
@@ -30,6 +33,9 @@ class CreateLocationService {
             data: {
                 code: code,
                 region: region,
+                city: city,
+                store: store,
+                id_store: id_store,
                 cash_price: cash_price,
                 term_price: term_price,
                 parcel: parcel,
