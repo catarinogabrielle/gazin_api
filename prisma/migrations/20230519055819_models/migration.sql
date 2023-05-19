@@ -26,6 +26,8 @@ CREATE TABLE "location" (
     "term_price" TEXT NOT NULL,
     "parcel" TEXT NOT NULL,
     "value_parcel" TEXT NOT NULL,
+    "street" TEXT NOT NULL,
+    "street_number" TEXT NOT NULL,
     "create_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
     "update_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
 

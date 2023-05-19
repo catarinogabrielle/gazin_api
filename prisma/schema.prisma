@@ -39,6 +39,8 @@ model Location {
   term_price   String
   parcel       String
   value_parcel String
+  street       String
+  street_number String
 
   create_at DateTime? @default(now())
   update_at DateTime? @default(now())

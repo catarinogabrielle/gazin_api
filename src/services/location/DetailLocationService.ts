@@ -13,7 +13,9 @@ class DetailLocationService {
                 cash_price: true,
                 term_price: true,
                 parcel: true,
-                value_parcel: true
+                value_parcel: true,
+                street: true,
+                street_number: true
             }
         })
 
