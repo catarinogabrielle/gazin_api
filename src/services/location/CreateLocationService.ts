@@ -19,16 +19,6 @@ class CreateLocationService {
             throw new Error("Campo vazio")
         }
 
-        const locationAlreadyExists = await prismaClient.location.findFirst({
-            where: {
-                code: code,
-            }
-        })
-
-        if (locationAlreadyExists) {
-            throw new Error("nome ou codigo já existente")
-        }
-
         const location = await prismaClient.location.create({
             data: {
                 code: code,
