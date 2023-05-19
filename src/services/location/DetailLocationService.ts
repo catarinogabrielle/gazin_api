@@ -15,7 +15,7 @@ class DetailLocationService {
                 parcel: true,
                 value_parcel: true,
                 street: true,
-                street_number: true
+                postal_code: true
             }
         })
 

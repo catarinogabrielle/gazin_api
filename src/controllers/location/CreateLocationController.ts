@@ -3,7 +3,7 @@ import { CreateLocationService } from '../../services/location/CreateLocationSer
 
 class CreateLocationController {
     async handle(request: Request, response: Response) {
-        const { code, region, city, store, id_store, cash_price, term_price, parcel, value_parcel, street, street_number } = request.body;
+        const { code, region, city, store, id_store, cash_price, term_price, parcel, value_parcel, street, postal_code } = request.body;
 
         const createLocationService = new CreateLocationService();
 
@@ -18,7 +18,7 @@ class CreateLocationController {
             parcel,
             value_parcel,
             street,
-            street_number
+            postal_code
         });
 
         return response.json(location);

@@ -11,13 +11,13 @@ interface UserRequest {
     parcel: string;
     value_parcel: string;
     street: string;
-    street_number: string;
+    postal_code: string;
 }
 
 class CreateLocationService {
-    async execute({ code, region, city, store, id_store, cash_price, term_price, parcel, value_parcel, street, street_number }: UserRequest) {
+    async execute({ code, region, city, store, id_store, cash_price, term_price, parcel, value_parcel, street, postal_code }: UserRequest) {
 
-        if (!code || !region || !city || !store || !id_store || !cash_price || !term_price || !parcel || !value_parcel || !street || !street_number) {
+        if (!code || !region || !city || !store || !id_store || !cash_price || !term_price || !parcel || !value_parcel || !street || !postal_code) {
             throw new Error("Campo vazio")
         }
 
@@ -33,7 +33,7 @@ class CreateLocationService {
                 parcel: parcel,
                 value_parcel: value_parcel,
                 street: street,
-                street_number: street_number
+                postal_code: postal_code
             }
         })
 

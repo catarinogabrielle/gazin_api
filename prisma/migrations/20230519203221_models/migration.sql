@@ -27,7 +27,7 @@ CREATE TABLE "location" (
     "parcel" TEXT NOT NULL,
     "value_parcel" TEXT NOT NULL,
     "street" TEXT NOT NULL,
-    "street_number" TEXT NOT NULL,
+    "postal_code" TEXT NOT NULL,
     "create_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
     "update_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
 
