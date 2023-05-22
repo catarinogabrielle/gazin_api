@@ -40,10 +40,33 @@ model Location {
   parcel       String
   value_parcel String
   street       String
-  postal_code String
+  postal_code  String
 
   create_at DateTime? @default(now())
   update_at DateTime? @default(now())
 
   @@map("location")
+}
+
+model Video {
+  id    String @id @default(uuid())
+  brand String
+  code  String
+  video String
+
+  create_at DateTime? @default(now())
+  update_at DateTime? @default(now())
+
+  @@map("video")
+}
+
+model Live {
+  id    String  @id @default(uuid())
+  live  Boolean
+  video String
+
+  create_at DateTime? @default(now())
+  update_at DateTime? @default(now())
+
+  @@map("live")
 }

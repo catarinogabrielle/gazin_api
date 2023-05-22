@@ -1,6 +1,6 @@
 import prismaClient from "../../prisma"
 
-interface UserRequest {
+interface LocationRequest {
     code: string;
     region: string;
     city: string;
@@ -15,7 +15,7 @@ interface UserRequest {
 }
 
 class CreateLocationService {
-    async execute({ code, region, city, store, id_store, cash_price, term_price, parcel, value_parcel, street, postal_code }: UserRequest) {
+    async execute({ code, region, city, store, id_store, cash_price, term_price, parcel, value_parcel, street, postal_code }: LocationRequest) {
 
         if (!code || !region || !city || !store || !id_store || !cash_price || !term_price || !parcel || !value_parcel || !street || !postal_code) {
             throw new Error("Campo vazio")

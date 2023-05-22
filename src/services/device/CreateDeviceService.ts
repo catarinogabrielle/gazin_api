@@ -1,6 +1,6 @@
 import prismaClient from "../../prisma"
 
-interface UserRequest {
+interface DeviceRequest {
     name: string;
     code: string;
     cash_price: string;
@@ -11,7 +11,7 @@ interface UserRequest {
 }
 
 class CreateDeviceService {
-    async execute({ name, code, cash_price, term_price, parcel, value_parcel, location }: UserRequest) {
+    async execute({ name, code, cash_price, term_price, parcel, value_parcel, location }: DeviceRequest) {
 
         if (!name || !code || !cash_price || !term_price || !parcel || !value_parcel || !location) {
             throw new Error("Campo vazio")
