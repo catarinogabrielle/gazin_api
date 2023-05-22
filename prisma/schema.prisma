@@ -52,6 +52,7 @@ model Location {
 model Video {
   id    String @id @default(uuid())
   brand String
+  code  String
   video String
 
   create_at DateTime? @default(now())

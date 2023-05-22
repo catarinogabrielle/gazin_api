@@ -3,12 +3,13 @@ import { CreateVideoService } from '../../services/video/CreateVideoService'
 
 class CreateVideoController {
     async handle(request: Request, response: Response) {
-        const { brand, video } = request.body;
+        const { brand, code, video } = request.body;
 
         const createVideoService = new CreateVideoService();
 
         const video_ = await createVideoService.execute({
             brand,
+            code,
             video
         });
 

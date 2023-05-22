@@ -2,6 +2,7 @@
 CREATE TABLE "device" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
+    "brand" TEXT NOT NULL,
     "code" TEXT NOT NULL,
     "cash_price" TEXT NOT NULL,
     "term_price" TEXT NOT NULL,
