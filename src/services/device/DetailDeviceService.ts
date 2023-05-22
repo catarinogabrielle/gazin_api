@@ -6,6 +6,7 @@ class DetailDeviceService {
             select: {
                 id: true,
                 name: true,
+                brand: true,
                 code: true,
                 cash_price: true,
                 term_price: true,

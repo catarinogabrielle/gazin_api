@@ -15,6 +15,7 @@ datasource db {
 model Device {
   id           String  @id @default(uuid())
   name         String
+  brand        String
   code         String
   cash_price   String
   term_price   String
@@ -51,7 +52,6 @@ model Location {
 model Video {
   id    String @id @default(uuid())
   brand String
-  code  String
   video String
 
   create_at DateTime? @default(now())

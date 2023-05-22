@@ -2,21 +2,19 @@ import prismaClient from "../../prisma"
 
 interface VideoRequest {
     brand: string;
-    code: string;
     video: string;
 }
 
 class CreateVideoService {
-    async execute({ brand, code, video }: VideoRequest) {
+    async execute({ brand, video }: VideoRequest) {
 
-        if (!brand || !code || !video) {
+        if (!brand || !video) {
             throw new Error("Campo vazio")
         }
 
         const video_ = await prismaClient.video.create({
             data: {
                 brand: brand,
-                code: code,
                 video: video
             }
         })

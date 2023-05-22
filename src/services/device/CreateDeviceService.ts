@@ -2,6 +2,7 @@ import prismaClient from "../../prisma"
 
 interface DeviceRequest {
     name: string;
+    brand: string;
     code: string;
     cash_price: string;
     term_price: string;
@@ -11,9 +12,9 @@ interface DeviceRequest {
 }
 
 class CreateDeviceService {
-    async execute({ name, code, cash_price, term_price, parcel, value_parcel, location }: DeviceRequest) {
+    async execute({ name, brand, code, cash_price, term_price, parcel, value_parcel, location }: DeviceRequest) {
 
-        if (!name || !code || !cash_price || !term_price || !parcel || !value_parcel || !location) {
+        if (!name || !brand || !code || !cash_price || !term_price || !parcel || !value_parcel || !location) {
             throw new Error("Campo vazio")
         }
 
@@ -31,6 +32,7 @@ class CreateDeviceService {
         const device = await prismaClient.device.create({
             data: {
                 name: name,
+                brand: brand,
                 code: code,
                 cash_price: cash_price,
                 term_price: term_price,
