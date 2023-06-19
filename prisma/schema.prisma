@@ -12,43 +12,6 @@ datasource db {
 
 //criar uma migration: yarn prisma migrate dev
 
-model Device {
-  id           String  @id @default(uuid())
-  name         String
-  brand        String
-  code         String
-  cash_price   String
-  term_price   String
-  parcel       String
-  value_parcel String
-  location     Boolean
-
-  create_at DateTime? @default(now())
-  update_at DateTime? @default(now())
-
-  @@map("device")
-}
-
-model Location {
-  id           String @id @default(uuid())
-  code         String
-  region       String
-  city         String
-  store        String
-  id_store     String
-  cash_price   String
-  term_price   String
-  parcel       String
-  value_parcel String
-  street       String
-  postal_code  String
-
-  create_at DateTime? @default(now())
-  update_at DateTime? @default(now())
-
-  @@map("location")
-}
-
 model Video {
   id    String @id @default(uuid())
   brand String
