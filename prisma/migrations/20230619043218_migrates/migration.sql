@@ -2,7 +2,6 @@
 CREATE TABLE "video" (
     "id" TEXT NOT NULL,
     "brand" TEXT NOT NULL,
-    "code" TEXT NOT NULL,
     "video" TEXT NOT NULL,
     "create_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
     "update_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,

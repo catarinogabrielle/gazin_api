@@ -6,7 +6,6 @@ class DetailVideoService {
             select: {
                 id: true,
                 brand: true,
-                code: true,
                 video: true
             }
         })
