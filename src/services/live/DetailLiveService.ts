@@ -2,14 +2,14 @@ import prismaClient from "../../prisma";
 
 class DetailLiveService {
     async execute() {
-        const device = await prismaClient.live.findMany({
+        const live_ = await prismaClient.live.findMany({
             select: {
                 live: true,
                 video: true
             }
         })
 
-        return device;
+        return live_;
 
     }
 }

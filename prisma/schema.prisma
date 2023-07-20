@@ -33,3 +33,17 @@ model Live {
 
   @@map("live")
 }
+
+model Devices {
+  id         String @id @default(uuid())
+  device     String
+  price      String
+  price_card String
+  price_desk String
+  branch     String
+
+  create_at DateTime? @default(now())
+  update_at DateTime? @default(now())
+
+  @@map("devices")
+}
