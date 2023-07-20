@@ -6,6 +6,7 @@ import { CreateLiveController } from './controllers/live/CreateLiveController'
 import { DetailLiveController } from './controllers/live/DetailLiveController'
 import { CreateDeviceController } from './controllers/device/CreateDeviceController'
 import { DetailDeviceController } from './controllers/device/DetailDeviceController'
+import { RemoveDeviceController } from './controllers/device/RemoveDeviceController'
 
 const router = Router()
 
@@ -20,5 +21,6 @@ router.get('/live', new DetailLiveController().handle)
 // --- ROTAS DEVICES ---
 router.post('/devices', new CreateDeviceController().handle)
 router.get('/devices', new DetailDeviceController().handle)
+router.delete('/devices', new RemoveDeviceController().handle)
 
 export { router }

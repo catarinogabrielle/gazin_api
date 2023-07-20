@@ -1,6 +1,6 @@
 import prismaClient from "../../prisma"
 
-interface LiveRequest {
+interface DeviceRequest {
     device: string;
     price: string;
     price_card: string;
@@ -9,7 +9,7 @@ interface LiveRequest {
 }
 
 class CreateDeviceService {
-    async execute({ device, price, price_card, price_desk, branch }: LiveRequest) {
+    async execute({ device, price, price_card, price_desk, branch }: DeviceRequest) {
 
         if (!device || !price || !price_card || !price_desk || !branch) {
             throw new Error("Campo vazio")

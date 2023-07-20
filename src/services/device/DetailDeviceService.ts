@@ -4,6 +4,7 @@ class DetailDeviceService {
     async execute() {
         const device_ = await prismaClient.devices.findMany({
             select: {
+                id: true,
                 device: true,
                 price: true,
                 price_card: true,
