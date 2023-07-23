@@ -6,6 +6,7 @@ class DetailDeviceService {
             select: {
                 id: true,
                 device: true,
+                color: true,
                 branch: true
             }
         })

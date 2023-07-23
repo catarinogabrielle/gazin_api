@@ -24,6 +24,7 @@ CREATE TABLE "live" (
 CREATE TABLE "devices" (
     "id" TEXT NOT NULL,
     "device" TEXT NOT NULL,
+    "color" TEXT NOT NULL,
     "branch" TEXT NOT NULL,
     "create_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
     "update_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
