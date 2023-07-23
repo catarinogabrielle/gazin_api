@@ -6,9 +6,6 @@ class DetailDeviceService {
             select: {
                 id: true,
                 device: true,
-                price: true,
-                price_card: true,
-                price_desk: true,
                 branch: true
             }
         })
