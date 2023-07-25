@@ -7,6 +7,7 @@ class DetailDeviceService {
                 id: true,
                 device: true,
                 color: true,
+                voltagem: true,
                 branch: true
             }
         })

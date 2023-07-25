@@ -35,10 +35,11 @@ model Live {
 }
 
 model Devices {
-  id     String @id @default(uuid())
-  device String
-  color  String
-  branch String
+  id       String @id @default(uuid())
+  device   String
+  color    String
+  voltagem String
+  branch   String
 
   create_at DateTime? @default(now())
   update_at DateTime? @default(now())
