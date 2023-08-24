@@ -7,6 +7,7 @@ import { DetailLiveController } from './controllers/live/DetailLiveController'
 import { CreateDeviceController } from './controllers/device/CreateDeviceController'
 import { DetailDeviceController } from './controllers/device/DetailDeviceController'
 import { RemoveDeviceController } from './controllers/device/RemoveDeviceController'
+import { UpdateDeviceController } from './controllers/device/UpdateDeviceController'
 
 const router = Router()
 
@@ -22,5 +23,6 @@ router.get('/live', new DetailLiveController().handle)
 router.post('/devices', new CreateDeviceController().handle)
 router.get('/devices', new DetailDeviceController().handle)
 router.delete('/devices', new RemoveDeviceController().handle)
+router.put('/devices', new UpdateDeviceController().handle)
 
 export { router }
