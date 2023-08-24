@@ -8,7 +8,10 @@ class DetailDeviceService {
                 device: true,
                 color: true,
                 voltagem: true,
-                branch: true
+                branch: true,
+                cash: true,
+                card: true,
+                wallet: true
             }
         })
 

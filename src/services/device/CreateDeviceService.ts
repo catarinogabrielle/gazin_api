@@ -5,12 +5,15 @@ interface DeviceRequest {
     color: string;
     voltagem: string;
     branch: string;
+    cash: string;
+    card: string;
+    wallet: string;
 }
 
 class CreateDeviceService {
-    async execute({ device, color, voltagem, branch }: DeviceRequest) {
+    async execute({ device, color, voltagem, branch, cash, card, wallet }: DeviceRequest) {
 
-        if (!device || !color || !branch) {
+        if (!device || !color || !branch || !cash || !card || !wallet) {
             throw new Error("Campo vazio")
         }
 
@@ -19,7 +22,10 @@ class CreateDeviceService {
                 device: device,
                 color: color,
                 voltagem: voltagem,
-                branch: branch
+                branch: branch,
+                cash: cash,
+                card: card,
+                wallet: wallet
             }
         })
 

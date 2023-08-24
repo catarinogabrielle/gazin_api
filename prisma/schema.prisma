@@ -40,6 +40,9 @@ model Devices {
   color    String
   voltagem String
   branch   String
+  cash     String
+  card     String
+  wallet   String
 
   create_at DateTime? @default(now())
   update_at DateTime? @default(now())
